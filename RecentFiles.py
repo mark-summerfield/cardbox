@@ -24,7 +24,7 @@ class RecentFiles:
             pass # not found which is fine
         self.filenames.appendleft(filename) # put first
 
-    
+
     def files(self):
         return iter(self.filenames)
 
