@@ -5,12 +5,12 @@
 import collections
 import os
 
-from Const import DEFAULT_MAX_RECENT_FILES
+DEFAULT_MAX = 9
 
 
 class RecentFiles:
 
-    def __init__(self, maximum=DEFAULT_MAX_RECENT_FILES):
+    def __init__(self, maximum=DEFAULT_MAX):
         self.filenames = collections.deque((), maximum)
 
 
@@ -34,8 +34,17 @@ class RecentFiles:
             self.filenames = collections.deque(self.filenames, size)
 
 
+    @property
+    def maxlen(self):
+        return self.filenames.maxlen
+
+
     def __len__(self):
         return len(self.filenames)
+
+
+    def __str__(self):
+        return f'[{",".join(self.filenames)}]<={self.filenames.maxlen}'
 
 
 if __name__ == '__main__':

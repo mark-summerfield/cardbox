@@ -2,6 +2,7 @@
 # Copyright © 2025 Mark Summerfield. All rights reserved.
 # License: GPLv3
 
+from PySide2.QtCore import QTimer
 from PySide2.QtWidgets import QMainWindow
 
 
@@ -14,18 +15,18 @@ class Window(QMainWindow):
         self.mdiArea = None
         self.statusIndicator = None
         self.makeActions()
-        self.makeGui()
-        self.loadSettings()
+        self.makeWidgets()
 
 
     def show(self):
+        self.restoreGeometry(self.config.windowGeometry)
+        self.restoreState(self.config.windowState)
+        # TODO self.fileMenuUpdate()
+        # TODO self.windowMenuUpdate()
         super().show()
-        # TODO
-        # if me.config.MostRecentFile != "" {
-        # 	me.openModel(me.config.MostRecentFile)
-        # }
-        # me.fileMenuUpdate()
-        # me.windowMenuUpdate()
+        if self.config.mostRecentFile:
+            QTimer.singleShot(
+                0, lambda: self.openModel(self.config.mostRecentFile))
 
 
     def makeActions(self): # TODO
@@ -84,9 +85,26 @@ class Window(QMainWindow):
         self.helpAboutAction = None
 
 
-    def makeGui(self):
-        print('makeGui') # TODO
+    def closeEvent(self, _event):
+        self.saveSettings()
+        self.closeModel()
 
 
-    def loadSettings(self):
-        print('loadSettings') # TODO
+    def makeWidgets(self):
+        print('makeWidgets') # TODO
+
+
+    def saveSettings(self):
+        self.config.windowGeometry = self.saveGeometry()
+        self.config.windowState = self.saveState()
+        if self.model:
+            self.config.mostRecentFile = self.model.filename
+        self.config.save()
+
+
+    def openModel(self, filename):
+        print('openModel', filename) # TODO
+
+
+    def closeModel(self):
+        print('closeModel') # TODO

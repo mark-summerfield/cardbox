@@ -10,18 +10,7 @@ DOMAIN = 'MNS'
 
 TIMEOUT_LONG = 10000
 
-CONFIG_WINDOW = 'Window'
-CONFIG_WINDOW_STATE = 'State'
-CONFIG_WINDOW_GEOMETRY = 'Geometry'
-CONFIG_CURSOR_BLINK = 'CursorBlink'
-DEFAULT_CURSOR_BLINK = True
-CONFIG_MOST_RECENT_FILE = 'MostRecentFile'
-CONFIG_RECENT_FILES = 'RecentFiles'
-CONFIG_RECENT_FILE = 'File'
-CONFIG_MAX_RECENT_FILES = 'MaxRecentFiles'
-DEFAULT_MAX_RECENT_FILES = 9
-
-SVG_ICON = 'cardindex.svg'
+SVG_ICON = 'cardbox.svg'
 SVG_FILE_NEW = 'document-new.svg'
 SVG_FILE_OPEN = 'document-open.svg'
 SVG_FILE_SAVE = 'document-save.svg'
