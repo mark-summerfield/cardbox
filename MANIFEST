@@ -3,6 +3,15 @@
 
 CardBox.pyw
 MainWindow.py
+MainWindowModel.py
+MainWindowMake.py
+FileActions.py
+EditActions.py
+CardActions.py
+BoxActions.py
+SearchActions.py
+WindowActions.py
+HelpActions.py
 Util.py
 RecentFiles.py
 Config.py
