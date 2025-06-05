@@ -6,10 +6,20 @@ import os
 import re
 
 from PySide2.QtGui import QIcon
+from PySide2.QtWidgets import QAction
 
 
 def getIcon(svg):
     return QIcon(os.path.join(os.path.dirname(__file__), "images", svg))
+
+
+def makeAction(iconname, text, tooltip=None, shortcut=None):
+    action = QAction(getIcon(iconname), text)
+    if tooltip is not None:
+        action.setToolTip(tooltip)
+    if shortcut is not None:
+        action.setShortcut(shortcut)
+    return action
 
 
 def clamp(minimum, value, maximum):
