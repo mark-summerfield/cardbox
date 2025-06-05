@@ -5,7 +5,6 @@
 import os
 
 from PySide2.QtCore import QTimer
-from PySide2.QtGui import QKeySequence
 from PySide2.QtWidgets import QMainWindow, QMessageBox
 
 import BoxActions
@@ -50,18 +49,14 @@ class Window(QMainWindow, MainWindowMake.Mixin, MainWindowModel.Mixin,
                 0, lambda: self.openModel(self.config.mostRecentFile))
 
 
+    def closeEvent(self, _event):
+        self.saveSettings()
+        self.closeModel()
+
+
     def warn(self, message):
         QMessageBox.warning(self, 'Error — ' + APPNAME, message,
                             QMessageBox.Close)
-
-
-    def getDefaultDir(self):
-        dirname = None
-        if self.model:
-            dirname = os.path.dirname(self.model.filename)
-        if dirname is None:
-            dirname = os.path.dirname(os.path.expanduser('~'))
-        return os.path.abspath(dirname)
 
 
     def saveSettings(self):
@@ -70,8 +65,3 @@ class Window(QMainWindow, MainWindowMake.Mixin, MainWindowModel.Mixin,
         if self.model:
             self.config.mostRecentFile = self.model.filename
         self.config.save()
-
-
-    def closeEvent(self, _event):
-        self.saveSettings()
-        self.closeModel()

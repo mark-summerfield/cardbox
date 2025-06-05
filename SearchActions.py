@@ -5,7 +5,7 @@
 from PySide2.QtGui import QKeySequence
 
 import Util
-from Const import SVG_SEARCH_DELETE, SVG_SEARCH_NEW, SVG_VIEW_SEARCHES
+from Images import SVG_SEARCH_DELETE, SVG_SEARCH_NEW, SVG_VIEW_SEARCHES
 
 
 class Mixin:

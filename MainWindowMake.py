@@ -25,7 +25,7 @@ class Mixin:
         self.cardMenu = None
         self.boxMenu = None
         self.searchMenu = None
-        self.windowMenu = None
+        self.windowMenuMake(menubar)
         self.helpMenu = None
 
 

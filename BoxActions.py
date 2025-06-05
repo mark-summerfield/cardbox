@@ -5,7 +5,7 @@
 from PySide2.QtGui import QKeySequence
 
 import Util
-from Const import (
+from Images import (
     SVG_BOX_ADD_FROM_BOX, SVG_BOX_ADD_FROM_SEARCH, SVG_BOX_DELETE,
     SVG_BOX_NEW, SVG_VIEW_BOXES)
 

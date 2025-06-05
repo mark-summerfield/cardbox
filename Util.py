@@ -27,6 +27,13 @@ def clamp(minimum, value, maximum):
             else value))
 
 
+def getDefaultDir(self, filename=None): # e.g., model.filename
+    dirname = os.path.dirname(filename) if filename else None
+    if dirname is None:
+        dirname = os.path.dirname(os.path.expanduser('~'))
+    return os.path.abspath(dirname)
+
+
 def getConfigFilename(domain, appname, ext='.ini'):
     name = re.sub(r'\W+', '_', appname) + ext
     home = os.path.expanduser('~')

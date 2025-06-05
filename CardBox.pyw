@@ -5,13 +5,13 @@
 import os
 import sys
 
-from PySide2.QtWidgets import (
-    QApplication, QDialog, QLineEdit, QTextBrowser, QVBoxLayout)
+from PySide2.QtWidgets import QApplication
 
 import Config
 import MainWindow
 import Util
-from Const import APPNAME, DOMAIN, SVG_ICON
+from Const import APPNAME, DOMAIN
+from Images import SVG_ICON
 
 
 def main():

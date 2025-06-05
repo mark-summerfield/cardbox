@@ -5,7 +5,7 @@
 from PySide2.QtGui import QKeySequence
 
 import Util
-from Const import (
+from Images import (
     SVG_FILE_CONFIGURE, SVG_FILE_EXPORT, SVG_FILE_NEW, SVG_FILE_OPEN,
     SVG_FILE_QUIT, SVG_FILE_SAVE, SVG_FILE_SAVE_AS, SVG_HELP_ABOUT)
 
@@ -44,6 +44,9 @@ class Mixin:
     def fileMenuUpdate(self):
         print('fileMenuUpdate') # TODO
         self.fileMenu.clear()
+        for action in (self.fileQuitAction,):
+            if action.receivers('triggered'):
+                action.triggered.disconnect()
         self.fileMenuAddActions()
         self.fileMenuMakeConnections()
         # TODO recent files

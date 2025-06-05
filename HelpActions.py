@@ -5,7 +5,7 @@
 from PySide2.QtGui import QKeySequence
 
 import Util
-from Const import SVG_HELP_ABOUT, SVG_HELP_HELP
+from Images import SVG_HELP_ABOUT, SVG_HELP_HELP
 
 
 class Mixin:
