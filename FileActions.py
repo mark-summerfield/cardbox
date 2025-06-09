@@ -5,7 +5,7 @@
 from PySide2.QtGui import QKeySequence
 
 import Util
-from Images import (
+from ImageFilenames import (
     SVG_FILE_CONFIGURE, SVG_FILE_EXPORT, SVG_FILE_NEW, SVG_FILE_OPEN,
     SVG_FILE_QUIT, SVG_FILE_SAVE, SVG_FILE_SAVE_AS, SVG_HELP_ABOUT)
 

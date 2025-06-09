@@ -5,7 +5,7 @@
 from PySide2.QtGui import QKeySequence
 
 import Util
-from Images import (
+from ImageFilenames import (
     SVG_WINDOW, SVG_WINDOW_CASCADE, SVG_WINDOW_CLOSE, SVG_WINDOW_NEXT,
     SVG_WINDOW_PREV, SVG_WINDOW_TILE, SVG_WINDOWS)
 

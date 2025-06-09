@@ -5,7 +5,7 @@
 from PySide2.QtGui import QKeySequence
 
 import Util
-from Images import (
+from ImageFilenames import (
     SVG_CARD_ADD_TO_BOX, SVG_CARD_DELETE, SVG_CARD_EXPORT, SVG_CARD_HIDE,
     SVG_CARD_NEW, SVG_CARD_REMOVE_FROM_BOX, SVG_CARD_UNHIDE,
     SVG_VIEW_HIDDEN, SVG_VIEW_UNBOXED, SVG_VIEW_VISIBLE)

@@ -55,7 +55,7 @@ class Window(QMainWindow, MainWindowMake.Mixin, MainWindowModel.Mixin,
 
 
     def warn(self, message):
-        QMessageBox.warning(self, 'Error — ' + APPNAME, message,
+        QMessageBox.warning(self, 'Warning — ' + APPNAME, message,
                             QMessageBox.Close)
 
 

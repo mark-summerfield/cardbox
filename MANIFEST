@@ -15,7 +15,7 @@ HelpActions.py
 Util.py
 RecentFiles.py
 Config.py
-Images.py
+ImageFilenames.py
 Const.py
 
 README.md

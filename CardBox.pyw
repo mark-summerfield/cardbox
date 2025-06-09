@@ -11,7 +11,7 @@ import Config
 import MainWindow
 import Util
 from Const import APPNAME, DOMAIN
-from Images import SVG_ICON
+from ImageFilenames import SVG_ICON
 
 
 def main():
